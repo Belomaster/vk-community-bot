@@ -1,0 +1,17 @@
+version: null
+meta:
+  environment: csharp
+  toolchain:
+    name: dotnet
+    version: "8.0"  # Убедитесь, что это совпадает с версией .NET вашего проекта
+build:
+  image: mcr.microsoft.com/dotnet/sdk:8.0  # Образ Docker для сборки
+run:
+  image: mcr.microsoft.com/dotnet/sdk:8.0  # Образ Docker для запуска
+  buildFileName: bin/Release/net8.0/VKbot.dll  # Укажите правильный путь к вашему DLL-файлу
+  # Если у вас .exe-файл, используйте: buildFileName: bin/Release/VKbot.exe
+  command: dotnet VKbot.dll  # Команда для запуска (для .dll). Для .exe — просто имя файла
+  persistenceMount: /data  # Точка монтирования для сохраняемых данных (например, БД)
+  containerPort: 80  # Порт, на котором слушает приложение
+  servicePort: 80  # Внешний порт для доступа к приложению
+serviceType: compute  # Тип сервиса (вычислительный)

@@ -1,0 +1,17 @@
+# Автоопределение для всех текстовых файлов
+* text=auto
+
+# Принудительный LF (Unix-стиль) для скриптов и YAML
+*.sh text eol=lf
+*.yml text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+
+# Отметить бинарные файлы (Git не будет пытаться их сливать)
+*.png binary
+*.jpg binary
+*.exe binary
+
+# Игнорировать при архивации (например, для git archive)
+docs/ export-ignore
+node_modules/ export-ignore
