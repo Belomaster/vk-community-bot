@@ -1,0 +1,69 @@
+# Исключить бинарные файлы и артефакты сборки
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+
+# Исключить временные файлы Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.ncb
+*.ilk
+*.tlog
+
+# Исключить пакеты NuGet (кроме конфигурационного файла)
+packages/
+!packages/repositories.config
+
+# Исключить файлы отладки и профилирования
+*.pdb
+*.vspscc
+*.psd1
+
+# Исключить файлы сборки (но оставить исходные .config)
+*.exe
+*.dll
+*.cache
+
+# Исключить файлы IDE и автосохранения
+*.swp
+*.bak
+*.tmp
+
+# Дополнительные исключения для .NET проектов
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bld/
+[Ll]og/
+[Ll]ogs/
+
+# Файлы редактора кода
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
+
+# Резервные копии и временные файлы ОС
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Архивы и установщики
+*.zip
+*.tar.gz
+*.7z
+*.msi
+*.msi.log
+
+# Временные файлы
+*.tmp
+*~
+
+# Файлы анализа кода и покрытия
+*.coverage
+*.coveragexml
